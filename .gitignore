@@ -1,0 +1,38 @@
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+*.iws
+.DS_Store
+log/
+target/
+
+# built application files
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated files
+bin/
+gen/
+build/
+gradle/
+src/main/libs
+src/main/obj
+
+local.properties
+
+.gradle/
+/*/out
+/*/*/build
+/*/*/production
+*.ipr
+*~
+*.swp
+.cxx
+
