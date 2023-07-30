@@ -193,7 +193,7 @@ public class MyAuthenticator(val context: Context) : AbstractAccountAuthenticato
 }
 
 object AccountUtils {
-  const val ACCOUNT_TYPE = "com.samugg.example"
+  const val ACCOUNT_TYPE = "com.samugg.example. aasdfe"
   const val AUTH_TOKEN_TYPE = "com.samugg.example.aaa"
   var mServerAuthenticator: IServerAuthenticator = MyServerAuthenticator()
   fun getAccount(context: Context?, accountName: String?): Account? {
