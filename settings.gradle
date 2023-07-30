@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 rootProject.name = "Volvo XC60"
 
 include ':app'
+

@@ -2,6 +2,7 @@ plugins {
   id("com.android.application")
   id("kotlin-android")
   kotlin("kapt")
+  id("com.google.dagger.hilt.android")
 }
 
 android {
@@ -28,14 +29,17 @@ android {
     }
   }
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
   }
   kotlinOptions {
-    jvmTarget = "11"
+    jvmTarget = "17"
   }
   buildFeatures {
     compose = true
+  }
+  kapt {
+    correctErrorTypes = true
   }
   composeOptions {
     kotlinCompilerExtensionVersion = "1.4.1"
@@ -48,7 +52,6 @@ android {
 }
 
 dependencies {
-
   implementation("androidx.core:core-ktx:1.10.1")
   implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
   implementation("androidx.activity:activity-compose:1.7.1")
@@ -57,6 +60,9 @@ dependencies {
   implementation("androidx.compose.material3:material3:1.1.0")
   implementation("androidx.compose.ui:ui-tooling-preview:1.4.3")
 
+  implementation("com.google.dagger:hilt-android:2.44.2")
+  kapt("com.google.dagger:hilt-android-compiler:2.44")
+
 
   testImplementation("junit:junit:4.13.2")
 
@@ -64,6 +70,9 @@ dependencies {
   androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
   androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
+
   debugImplementation("androidx.compose.ui:ui-tooling")
   debugImplementation("androidx.compose.ui:ui-test-manifest")
+
+  debugImplementation("com.squareup.leakcanary:leakcanary-android:2.11")
 }
